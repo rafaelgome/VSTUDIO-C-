@@ -24,5 +24,13 @@ namespace aula_3
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e){    
+            Retangulo x = new Retangulo();
+            x.SetBase(double.Parse(txtBase.Text));
+            x.SetAltura(double.Parse(txtAltura.Text));
+            txtArea.Text = x.CalcArea().ToString();
+            txtDiagonal.Text = x.CalcDiagonal().ToString();
+        }
     }
 }
